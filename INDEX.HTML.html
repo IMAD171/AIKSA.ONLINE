@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AIKSA — بوابة الذكاء الاصطناعي في السعودية</title>
+  <meta name="description" content="AIKSA — أخبار وموارد وتقارير حول الذكاء الاصطناعي في السعودية والخليج. مقالات، أدوات، ودليل للمشاريع التقنية.">
+  <link rel="canonical" href="https://aiksa.online/">
+  <meta name="robots" content="index,follow">
+  <!-- Open Graph -->
+  <meta property="og:title" content="AIKSA — بوابة الذكاء الاصطناعي في السعودية">
+  <meta property="og:description" content="أخبار ومحتوى عن الذكاء الاصطناعي في السعودية والخليج. دليل أدوات، مقالات وموارد للمطورين والمهتمين.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aiksa.online/">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "AIKSA",
+    "url": "https://aiksa.online/",
+    "description": "بوابة الذكاء الاصطناعي في السعودية والخليج — أخبار، أدوات ومصادر تعليمية."
+  }
+  </script>
+
+  <style>
+    :root{
+      --accent: #0072ff;
+      --accent-2: #00c6ff;
+      --bg: #f6f8fb;
+      --card:#ffffff;
+      --muted:#567;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;font-family: 'Segoe UI', Tahoma, Arial, sans-serif;background:var(--bg);color:#1a1a1a;line-height:1.6;
+    }
+    a{color:inherit;text-decoration:none}
+
+    /* Header */
+    .topbar{background:linear-gradient(90deg,var(--accent),var(--accent-2));padding:14px 20px;color:white;position:sticky;top:0;z-index:60;}
+    .container{max-width:1100px;margin:0 auto;padding:0 16px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:48px;height:48px;border-radius:8px;background:rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;font-weight:700}
+    nav{margin-right:auto}
+    .nav-links{display:flex;gap:18px;align-items:center}
+    .nav-links a{color:white;font-weight:600}
+    .hamburger{display:none;border:none;background:transparent;color:white;font-size:22px}
+
+    /* Hero */
+    .hero{padding:48px 0;text-align:center}
+    .hero-card{background:linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02));padding:36px;border-radius:14px;display:grid;gap:14px;align-items:center}
+    .hero h1{margin:0;font-size:2.1rem}
+    .hero p{margin:0;color:var(--muted)}
+    .cta{display:inline-block;margin-top:8px;padding:12px 20px;border-radius:10px;background:white;color:var(--accent);font-weight:700}
+
+    /* grid */
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:22px;align-items:start}
+
+    /* posts */
+    .posts{display:grid;gap:16px}
+    .post{background:var(--card);padding:14px;border-radius:12px;box-shadow:0 6px 18px rgba(20,30,60,0.06)}
+    .post img{width:100%;border-radius:8px;height:170px;object-fit:cover;margin-bottom:10px}
+    .tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px}
+    .tag{font-size:12px;padding:6px 8px;border-radius:999px;background:#eef6ff;color:var(--accent);font-weight:600}
+    .meta{font-size:13px;color:var(--muted);margin-bottom:8px}
+
+    /* sidebar */
+    .card{background:var(--card);padding:14px;border-radius:12px;box-shadow:0 6px 18px rgba(20,30,60,0.06)}
+    .search{display:flex;gap:8px}
+    .search input{flex:1;padding:10px;border-radius:8px;border:1px solid #e6eef7}
+    .small{font-size:13px;color:var(--muted)}
+
+    footer{margin-top:30px;padding:22px 0;text-align:center;color:#556}
+
+    /* responsive */
+    @media(max-width:900px){
+      .grid{grid-template-columns:1fr}
+      .nav-links{display:none}
+      .hamburger{display:block}
+      .hero h1{font-size:1.5rem}
+    }
+
+    /* simple blog list */
+    .post-title{font-weight:700;margin-bottom:6px}
+    .about-list{list-style:none;padding:0;margin:0}
+    .about-list li{padding:8px 0;border-bottom:1px dashed #eef}
+
+    /* contact */
+    form{display:grid;gap:10px}
+    input,textarea{padding:10px;border-radius:8px;border:1px solid #e6eef7;width:100%;}
+    button.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white;padding:12px;border-radius:10px;border:none;font-weight:700}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container" style="display:flex;align-items:center">
+      <div class="brand">
+        <div class="logo">AI</div>
+        <div>
+          <div style="font-weight:800">AIKSA</div>
+          <div style="font-size:12px;color:rgba(255,255,255,0.9)">بوابة الذكاء الاصطناعي في السعودية</div>
+        </div>
+      </div>
+      <nav style="margin-right:24px">
+        <div class="nav-links">
+          <a href="#home">الرئيسية</a>
+          <a href="#blog">المقالات</a>
+          <a href="#about">من نحن</a>
+          <a href="#contact">تواصل</a>
+        </div>
+      </nav>
+      <button class="hamburger" aria-label="قائمة" onclick="toggleMenu()">☰</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="home" class="hero">
+      <div class="hero-card">
+        <h1>أهلاً بك في AIKSA — نبض الذكاء الاصطناعي في الخليج</h1>
+        <p>أخبار، دروس وأدوات حول الذكاء الاصطناعي موجهة للمطورين، الشركات، والمهتمين في السعودية والمنطقة.</p>
+        <div>
+          <a class="cta" href="#blog">اطّلع على آخر المقالات</a>
+        </div>
+      </div>
+    </section>
+
+    <section style="margin-top:22px">
+      <div class="grid">
+        <div>
+          <h2 id="blog">أحدث المقالات</h2>
+          <div class="posts">
+            <article class="post">
+              <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=60" alt="AI news">
+              <div class="tags"><span class="tag">أخبار</span><span class="tag">نماذج</span></div>
+              <div class="meta">12 أغسطس 2025 — 3 د قراءة</div>
+              <div class="post-title">إطلاق مبادرة وطنية للذكاء الاصطناعي في السعودية</div>
+              <p>ملخص قصير للمقال يشرح المبادرة وتأثيرها على الشركات الناشئة والبحث العلمي في المملكة.</p>
+            </article>
+
+            <article class="post">
+              <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981b?auto=format&fit=crop&w=1200&q=60" alt="AI tools">
+              <div class="tags"><span class="tag">أدوات</span></div>
+              <div class="meta">3 أغسطس 2025 — 4 د قراءة</div>
+              <div class="post-title">أفضل 10 أدوات مجانية لتجارب الذكاء الاصطناعي</div>
+              <p>قائمة موجزة بأدوات ونصائح لتجربة وبناء نماذج AI بسرعة.</p>
+            </article>
+
+            <article class="post">
+              <img src="https://images.unsplash.com/photo-1581093588401-eca5a2b1b50b?auto=format&fit=crop&w=1200&q=60" alt="AI jobs">
+              <div class="tags"><span class="tag">وظائف</span></div>
+              <div class="meta">28 يوليو 2025 — 2 د قراءة</div>
+              <div class="post-title">كيف تبدأ مسيرتك في الذكاء الاصطناعي بالمملكة</div>
+              <p>خطوات عملية ونصائح للتعلم والحصول على أول وظيفة في مجال AI.</p>
+            </article>
+          </div>
+        </div>
+
+        <aside>
+          <div class="card" style="margin-bottom:16px">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+              <strong>ابحث في الموقع</strong>
+            </div>
+            <div class="search">
+              <input id="q" placeholder="ابحث عن مقال...">
+              <button onclick="doSearch()">بحث</button>
+            </div>
+            <div style="margin-top:12px" class="small">أدخل كلمة مفتاحية للعثور على المقالات.</div>
+          </div>
+
+          <div class="card">
+            <strong>عن الموقع</strong>
+            <p class="small" style="margin-top:8px">AIKSA يهدف لجمع كل ما يهم الذكاء الاصطناعي في السعودية: أدوات، تعليم، وأخبار.</p>
+            <ul class="about-list" style="margin-top:10px">
+              <li>مقالات محدثة أسبوعياً</li>
+              <li>دليل أدوات ومصادر مجانية</li>
+              <li>مساحة للشركات الناشئة</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about" style="margin-top:28px">
+      <div class="card">
+        <h2>من نحن</h2>
+        <p>AIKSA هي بوابة عربية تركز على أخبار الذكاء الاصطناعي في السعودية والخليج. نهدف لأن نكون مصدرًا موثوقًا للمهتمين، المبرمجين، وروّاد الأعمال.</p>
+        <p class="small">إذا رغبت بالمساهمة أو النشر كاتب مقالات ضيف، تواصل معنا.</p>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:22px;">
+      <div class="card">
+        <h2>تواصل معنا</h2>
+        <p class="small">أرسل لنا رسالة أو اعرض شراكة تجارية.</p>
+        <form onsubmit="handleContact(event)">
+          <input id="name" placeholder="الاسم" required>
+          <input id="email" type="email" placeholder="الإيميل" required>
+          <textarea id="message" rows="5" placeholder="رسالتك" required></textarea>
+          <div style="display:flex;gap:10px;justify-content:flex-start">
+            <button type="submit" class="primary">إرسال</button>
+            <button type="button" onclick="window.location.href='mailto:contact@aiksa.online'">أرسل عبر الإيميل</button>
+          </div>
+          <div id="contact-result" class="small" style="margin-top:10px"></div>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        &copy; 2025 AIKSA — جميع الحقوق محفوظة — <a href="#about">من نحن</a>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // Mobile menu placeholder
+    function toggleMenu(){
+      const links = document.querySelector('.nav-links');
+      if(!links) return;
+      links.style.display = (links.style.display === 'flex') ? 'none' : 'flex';
+    }
+
+    // Simple search (client-side demo)
+    function doSearch(){
+      const q = document.getElementById('q').value.trim().toLowerCase();
+      if(!q){alert('أدخل كلمة بحث');return}
+      // Very simple: highlight posts that contain the term
+      const posts = document.querySelectorAll('.post');
+      let found = 0;
+      posts.forEach(p=>{
+        const text = p.innerText.toLowerCase();
+        if(text.includes(q)){
+          p.style.border = '2px solid #dbeeff';
+          found++;
+        } else {
+          p.style.border = 'none';
+        }
+      });
+      alert(found + ' نتيجة');
+    }
+
+    // Contact form handler: opens user's email client with prefilled message (simple & privacy-friendly)
+    function handleContact(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const subject = encodeURIComponent('رسالة من موقع AIKSA — ' + name);
+      const body = encodeURIComponent('الاسم: ' + name + '\nالإيميل: ' + email + '\n\n' + message);
+      const mailto = `mailto:contact@aiksa.online?subject=${subject}&body=${body}`;
+      window.location.href = mailto;
+      document.getElementById('contact-result').innerText = 'تم فتح برنامج الإيميل لإرسال الرسالة — شكرًا!';
+    }
+  </script>
+
+  <!-- Deployment notes:
+       1) لحفظ اسم الدومين على GitHub Pages: أنشئ ملف اسمه CNAME وضع فيه السطر التالي:
+          aiksa.online
+       2) DNS settings (in your domain registrar): add these A records to point root domain to GitHub Pages:
+          185.199.108.153
+          185.199.109.153
+          185.199.110.153
+          185.199.111.153
+          and add CNAME for www pointing to: <your-github-username>.github.io
+       3) قم برفع هذا الملف index.html إلى مستودع عام (public) ثم فعّل GitHub Pages من الفرع main.
+       4) (Optional) Add Google Analytics / GA4 snippet where appropriate.
+  -->
+</body>
+</html>
